@@ -36,7 +36,7 @@ The application focuses on backend logic, routing, and templating rather than fr
 ---
 
 ## 📂 Project Structure
-Online-BookStore.github.io/
+Online-Book-Store-web-application/
 │
 ├── assets/        # Static assets (CSS, client-side JS)
 ├── config/        # Configuration files
@@ -49,3 +49,33 @@ Online-BookStore.github.io/
 ├── index.js       # Main server entry point
 ├── package.json   # Dependencies and scripts
 └── README.md      # Project documentation
+
+
+---
+
+## ✨ Features
+
+- 📖 Browse available books
+- 🔍 Search functionality
+- 🧾 Server-side rendered pages
+- 🧩 Modular routing system
+- 🎨 Handlebars-based templating
+- 📦 Clean and maintainable project structure
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/Sandeep45-cyber/Online-BookStore.github.io.git
+
+2️⃣ Navigate to the Project Directory
+cd Online-Book-Store-Web-Application
+
+3️⃣ Install Dependencies
+npm install
+
+4️⃣ Start the Application
+node index.js
