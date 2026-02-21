@@ -1,81 +1,114 @@
-# 📚 Online Book Store
+# Online Book Store Web Application
 
-An end-to-end **Online Book Store web application** built using **Node.js**, **Express**, and **Handlebars**.  
-This project demonstrates a clean MVC-style architecture, server-side rendering, routing, and a basic e-commerce workflow.
+A full-stack web application for buying and selling books, built with Node.js, Express, MongoDB, and Handlebars.
 
----
+## Features
 
-## 🚀 Project Overview
+- User authentication (signup/login)
+- Browse books by category
+- Search books by name
+- Book detail pages
+- Cart management and checkout flow
+- User order history
+- Admin dashboard
+- Admin book and admin-user management
+- Contact/feedback collection
+- Image upload to Cloudinary
 
-The Online Book Store allows users to:
-- Browse books
-- Search for books
-- View book details
-- Navigate through structured pages using server-side rendering
+## Tech Stack
 
-The application focuses on backend logic, routing, and templating rather than frontend frameworks, making it ideal for learning **core full-stack fundamentals**.
+- Runtime: Node.js
+- Server: Express.js
+- Database: MongoDB
+- Template engine: Handlebars (`hbs`)
+- File uploads: Multer
+- Image hosting: Cloudinary
+- Session management: `express-session`
 
----
+## Project Structure
 
-## 🧠 Tech Stack
-
-### Backend
-- Node.js
-- Express.js
-
-### Frontend
-- HTML
-- CSS
-- JavaScript
-- Handlebars (Template Engine)
-
-### Architecture
-- MVC-style folder structure
-- Server-side rendered views
-
----
-
-## 📂 Project Structure
+```text
 Online-Book-Store-web-application/
-│
-├── assets/        # Static assets (CSS, client-side JS)
-├── config/        # Configuration files
-├── forms/         # Form handling logic
-├── images/        # Book images and UI assets
-├── routes/        # Express route definitions
-├── scripts/       # Client-side JavaScript logic
-├── views/         # Handlebars templates
-│
-├── index.js       # Main server entry point
-├── package.json   # Dependencies and scripts
-└── README.md      # Project documentation
+├── assests/              # Static CSS files (as named in current codebase)
+├── config/               # Cloudinary and Multer configuration
+├── forms/                # Static HTML forms
+├── images/               # Local static images
+├── routes/               # Express routers (admin routes)
+├── scripts/              # Client-side JS
+├── views/                # Handlebars templates
+├── docs/                 # Extra project documentation
+├── index.js              # Main server entry point
+├── package.json
+└── README.md
+```
 
+## Prerequisites
 
----
+- Node.js 16+ (recommended)
+- npm 8+ (or compatible)
+- MongoDB instance
+- Cloudinary account
 
-## ✨ Features
+## Environment Variables
 
-- 📖 Browse available books
-- 🔍 Search functionality
-- 🧾 Server-side rendered pages
-- 🧩 Modular routing system
-- 🎨 Handlebars-based templating
-- 📦 Clean and maintainable project structure
+Create a `.env` file in the project root:
 
----
+```env
+mongo_url=your_mongodb_connection_string
+cloud_name=your_cloudinary_cloud_name
+api_key=your_cloudinary_api_key
+api_secret=your_cloudinary_api_secret
+PORT=8000
+```
 
-## ⚙️ Installation & Setup
+An example file is provided in `.env.example`.
 
-### 1️⃣ Clone the Repository
+## Local Setup
+
+1. Clone the repository:
 
 ```bash
-git clone https://github.com/Sandeep45-cyber/Online-BookStore.github.io.git
+git clone https://github.com/Sandeep45-cyber/Online-Book-Store-web-application.git
+cd Online-Book-Store-web-application
+```
 
-2️⃣ Navigate to the Project Directory
-cd Online-Book-Store-Web-Application
+2. Install dependencies:
 
-3️⃣ Install Dependencies
+```bash
 npm install
+```
 
-4️⃣ Start the Application
-node index.js
+3. Create `.env` from the example and set real values:
+
+```bash
+cp .env.example .env
+```
+
+4. Start the app:
+
+```bash
+npm start
+```
+
+5. Open in browser:
+
+```text
+http://localhost:8000
+```
+
+## Main Routes
+
+- User app: `/`, `/login`, `/signup`, `/search/:name`, `/category/:category`, `/cart/usercart`
+- Admin app: `/admin`, `/adminauth`, `/dashboard`, `/orders`, `/adminusers`
+
+Detailed route reference is documented in `docs/ROUTES.md`.
+
+## Documentation
+
+- Setup guide: `docs/SETUP.md`
+- Route reference: `docs/ROUTES.md`
+
+## Notes
+
+- Static directory name is currently `assests` in code and repository. Keep this unchanged unless you also refactor code references.
+- This codebase uses older package versions. Consider dependency updates before production deployment.
